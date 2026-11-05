@@ -1,6 +1,6 @@
 # Homebrew tap
 
-Shared Homebrew tap for macOS apps by [berkinduz](https://github.com/berkinduz). Each application has its own cask; future projects use this same repository.
+Shared Homebrew tap for macOS apps by [berkinduz](https://github.com/berkinduz). This repository distributes only applications maintained by berkinduz. Each application has its own cask; future projects use this same repository.
 
 ## Applications
 
@@ -19,8 +19,8 @@ brew upgrade --cask berkinduz/tap/slip
 
 Use the relevant application's token in place of `slip`. Historical names are recorded in [cask_renames.json](cask_renames.json); `berkinduz-slip` has been renamed to `slip`. If Homebrew asks for manual migration, run `brew migrate --cask berkinduz/tap/berkinduz-slip`.
 
-## Adding another project
+## Publishing another project
 
 Use this shared tap and add one `Casks/<app-name>.rb` file per application. Use the app's name without an author prefix. Release binaries stay in each project's own repository.
 
-Follow [CONTRIBUTING.md](CONTRIBUTING.md) for publishing and updating a cask. Report app issues in the relevant project's issue tracker.
+The maintainer workflow for publishing and updating these casks is documented in [PUBLISHING.md](PUBLISHING.md). Report app issues in the relevant project's issue tracker.

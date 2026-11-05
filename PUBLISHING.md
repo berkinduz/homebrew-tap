@@ -1,4 +1,6 @@
-# Publishing an application
+# Publishing your applications
+
+This tap distributes only applications maintained by **berkinduz**. This is the maintainer's publishing workflow for those projects.
 
 All projects use **`berkinduz/homebrew-tap`**, exposed to users as **`berkinduz/tap`**. Add a cask here for each macOS application.
 
