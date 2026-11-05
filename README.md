@@ -1,22 +1,26 @@
-# Slip for Homebrew
+# Homebrew tap
 
-Install [Slip](https://github.com/berkinduz/slip-menu-note-app), a free, open-source macOS menu bar notepad with live Markdown, checklists and optional iCloud Drive sync.
+Shared Homebrew tap for macOS apps by [berkinduz](https://github.com/berkinduz). Each application has its own cask; future projects use this same repository.
 
-```sh
-brew install --cask berkinduz/tap/berkinduz-slip
-```
+## Applications
 
-Requires **macOS 14+ and Apple Silicon**. Open **Slip** from Applications after installation.
+| App | Description | Install |
+| --- | --- | --- |
+| [Slip](https://github.com/berkinduz/slip-menu-note-app) | Quick notes and Markdown from your Mac menu bar | `brew install --cask berkinduz/tap/slip` |
 
-If you installed Slip manually, quit it and move that app out of Applications before installing the cask. Your notes remain in Application Support.
+Each app declares its own macOS and architecture requirements. Slip currently requires macOS 14+ and Apple Silicon. See its [installation guide](https://github.com/berkinduz/slip-menu-note-app/blob/main/distribution/homebrew/README.md) for manual-install migration and first-launch guidance.
 
-To update:
+## Updates
 
 ```sh
 brew update
-brew upgrade --cask berkinduz/tap/berkinduz-slip
+brew upgrade --cask berkinduz/tap/slip
 ```
 
-The app is ad hoc signed and not notarized. macOS may require first-launch approval; see [Apple’s opening-app guidance](https://support.apple.com/en-us/102445).
+Use the relevant application's token in place of `slip`. Historical names are recorded in [cask_renames.json](cask_renames.json); `berkinduz-slip` has been renamed to `slip`. If Homebrew asks for manual migration, run `brew migrate --cask berkinduz/tap/berkinduz-slip`.
 
-[User guide](https://github.com/berkinduz/slip-menu-note-app/blob/main/docs/USAGE.md) · [Releases](https://github.com/berkinduz/slip-menu-note-app/releases) · [Report an issue](https://github.com/berkinduz/slip-menu-note-app/issues)
+## Adding another project
+
+Use this shared tap and add one `Casks/<app-name>.rb` file per application. Use the app's name without an author prefix. Release binaries stay in each project's own repository.
+
+Follow [CONTRIBUTING.md](CONTRIBUTING.md) for publishing and updating a cask. Report app issues in the relevant project's issue tracker.
